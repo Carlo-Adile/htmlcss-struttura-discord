@@ -1,5 +1,5 @@
 /* 
-imposta larghezza pagina web, rimuovere per riportare a 100%
+set fixed width, remove to set back at 100% of screen size
  */
  
  body{
@@ -16,6 +16,8 @@ imposta larghezza pagina web, rimuovere per riportare a 100%
     --footer: #5d6ea5;
 }
 
+/* macro areas */
+
 .site_header{
     display:flex;
     flex-wrap: wrap;
@@ -24,6 +26,8 @@ imposta larghezza pagina web, rimuovere per riportare a 100%
     width:100%;
     background-color: var(--header);
 }
+
+/* header sections */
 
 #first_section{
     display:flex;
@@ -52,6 +56,8 @@ imposta larghezza pagina web, rimuovere per riportare a 100%
     background-color: var(--maindarker);
 }
 
+/* main sections */
+
 #main_first{
     width:100%;
     height: 350px;
@@ -77,10 +83,4 @@ imposta larghezza pagina web, rimuovere per riportare a 100%
     height: 350px;
     background-color: var(--footer);
 }
-/* 
-USATO X ALTERNARE COLORI
 
-#main_table tbody tr:nth-child(odd) {
-    background-color: #b1e5f2;
-}
- */
