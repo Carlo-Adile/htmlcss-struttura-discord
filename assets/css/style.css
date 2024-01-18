@@ -5,14 +5,16 @@
     --header_content: #e5c69f;
 }
 
-#site_header{
+.site_header{
     display:flex;
+    flex-wrap: wrap;
+    justify-content:center;
     height:600px;
     width:1700px;
     background-color: var(--header);
 }
 
-#site_header header{
+#first_section{
     display:flex;
     align-self:baseline;
     width:100%;
@@ -20,10 +22,8 @@
     background-color: var(--first_section);
 }
 
-#site_header main{
+#header_content{
     display:flex;
-    justify-self: center;
-    align-self:center;
     width: 750px;
     height: 350px;
     background-color: var(--header_content);
