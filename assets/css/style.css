@@ -1,8 +1,19 @@
+/* 
+imposta larghezza pagina web, rimuovere per riportare a 100%
+ */
+ 
+ body{
+    width:1000px;
+    align-content: center;
+}
 
 :root{
     --header:#42e77e;
     --first_section:#ae977a;
     --header_content: #e5c69f;
+    --main: #acb4cb;
+    --maindarker: #98a0ba;
+    --footer: #5d6ea5;
 }
 
 .site_header{
@@ -18,7 +29,7 @@
     display:flex;
     align-self:baseline;
     width:100%;
-    height:85px;
+    height:50px;
     background-color: var(--first_section);
 }
 
@@ -28,3 +39,48 @@
     height: 50%;
     background-color: var(--header_content);
 }
+
+.site_main{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content:center;
+    width:100%;
+    background-color: var(--main);
+}
+
+.site_main :nth-child(even){
+    background-color: var(--maindarker);
+}
+
+#main_first{
+    width:100%;
+    height: 350px;
+}
+
+#main_second{
+    width:100%;
+    height: 450px;
+}
+
+#main_third{
+    width:100%;
+    height: 350px;
+}
+
+#main_fourth{
+    width:100%;
+    height: 750px;
+}
+
+.site_footer{
+    width:100%;
+    height: 350px;
+    background-color: var(--footer);
+}
+/* 
+USATO X ALTERNARE COLORI
+
+#main_table tbody tr:nth-child(odd) {
+    background-color: #b1e5f2;
+}
+ */
