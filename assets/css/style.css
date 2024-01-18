@@ -12,8 +12,11 @@ set fixed width, remove to set back at 100% of screen size
     --first_section:#ae977a;
     --header_content: #e5c69f;
     --main: #acb4cb;
+    --footer:#5d6ea5;
     --maindarker: #98a0ba;
     --footer: #5d6ea5;
+    --footerbox1: #f08080;
+    --footerbox2: #20b2aa;
     --buttons: #daa520;
     --mainbox1: #747782;
     --mainbox2: #d26676;
@@ -148,8 +151,51 @@ set fixed width, remove to set back at 100% of screen size
 }
 
 .site_footer{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content: center;
     width:100%;
-    height: 350px;
+    height: 500px;
     background-color: var(--footer);
+    
 }
 
+#footer_first{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content:center;
+    align-content:center;
+    width:100%px;
+    height:400px;
+}
+
+#footer_box1{
+    display:flex;
+    flex-wrap: wrap;
+    width:200px;
+    height:300px;
+    background-color: var(--footerbox1);
+}
+
+#footer_box2{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content:center;
+    align-content:center;
+    width:500px;
+    height:300px;
+    background-color: var(--footerbox2);
+}
+
+#footer_second{
+    display:flex;
+    flex-wrap: wrap;
+}
+
+#footer_box3{
+    display:flex;
+    align-self: flex-end;
+    width:1000px;
+    height:50px;
+    background-color: var(--footerbox2);
+}
