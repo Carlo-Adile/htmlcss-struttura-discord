@@ -1,30 +1,27 @@
 /* 
-set fixed width, remove to set back at 100% of screen size
- */
- 
- body{
+set fixed width:
+*/
+body{
     width:1000px;
-    align-content: center;
 }
-
+ 
 :root{
     --header:#42e77e;
-    --first_section:#ae977a;
-    --header_content: #e5c69f;
+    --header-section1:#ae977a;
+    --header_section2: #e5c69f;
     --main: #acb4cb;
-    --footer:#5d6ea5;
     --maindarker: #98a0ba;
-    --footer: #5d6ea5;
-    --footerbox1: #f08080;
-    --footerbox2: #20b2aa;
-    --footerbox4: #7fffd4;
-    --buttons: #daa520;
+    --footer:#5d6ea5;
+    --header_buttons: #daa520;
     --mainbox1: #747782;
     --mainbox2: #d26676;
     --mainbox3: #228b22;
+    --footerbox1: #f08080;
+    --footerbox2: #20b2aa;
+    --footerbox4: #7fffd4;
 }
 
-/* macro areas */
+/* header sections */
 
 .site_header{
     display:flex;
@@ -35,21 +32,26 @@ set fixed width, remove to set back at 100% of screen size
     background-color: var(--header);
 }
 
-/* header sections */
-
-#first_section{
+#header_section1{
     display:flex;
+    flex-wrap:wrap;
     align-self:baseline;
-    width:100%;
-    height:50px;
-    background-color: var(--first_section);
-    flex-wrap:wrap; /* perchè è necessario flex wrap? */
     justify-content:center;
     align-content: center;
+    width:100%;
+    height:50px;
+    background-color: var(--header-section1);
 }
 
-#first_section div {
-    background-color: var(--buttons);
+#header_section1 div {
+    background-color: var(--header_buttons);
+}
+
+#header_section2{
+    display:flex;
+    width: 450px;
+    height: 200px;
+    background-color: var(--header_section2);
 }
 
 /* header elements */
@@ -69,18 +71,12 @@ set fixed width, remove to set back at 100% of screen size
     height:30px;
 }
 
-#header_content{
-    display:flex;
-    width: 45%;
-    height: 50%;
-    background-color: var(--header_content);
-}
+/* main sections */
 
 .site_main{
     display:flex;
     flex-wrap: wrap;
     justify-content:center;
-    width:100%;
     background-color: var(--main);
 }
 
@@ -88,41 +84,15 @@ set fixed width, remove to set back at 100% of screen size
     background-color: var(--maindarker);
 }
 
-/* main sections */
-
-#main_first{
+#main_section1{
     display:flex;
     flex-wrap:wrap;
-    width:100%;
     height: 350px;
     justify-content: center;
     align-content:center;
 }
 
-#box1 {
-    display:flex;
-    height:250px;
-    width:350px;
-    order:1;
-    background-color: var(--mainbox1);
-}
-
-#box2 {
-    display:flex;
-    height:250px;
-    width:250px;
-    order:2;
-    background-color: var(--mainbox2);
-}
-
-#box3 {
-    display:flex;
-    height:450px;
-    width:600px;
-    background-color: var(--mainbox3);
-}
-
-#main_second{
+#main_section2{
     display:flex;
     flex-direction: row-reverse;
     justify-content: center;
@@ -132,9 +102,8 @@ set fixed width, remove to set back at 100% of screen size
     height: 450px;
 }
 
-#main_third{
+#main_section3{
     display:flex;
-    flex-direction: row-reverse;
     justify-content: center;
     align-content:center;
     flex-wrap:wrap;
@@ -142,7 +111,7 @@ set fixed width, remove to set back at 100% of screen size
     height: 350px;
 }
 
-#main_fourth{
+#main_section4{
     display:flex;
     flex-wrap: wrap;
     justify-content:center;
@@ -151,29 +120,55 @@ set fixed width, remove to set back at 100% of screen size
     height: 550px;
 }
 
+/* main elements */
+
+#box1 {
+    height:250px;
+    width:350px;
+    order:1;
+    background-color: var(--mainbox1);
+}
+
+#box2 {
+    height:250px;
+    width:250px;
+    order:2;
+    background-color: var(--mainbox2);
+}
+
+#box3 {
+    height:450px;
+    width:600px;
+    background-color: var(--mainbox3);
+}
+
+/* footer sections */
+
 .site_footer{
     display:flex;
     flex-wrap:wrap;
     justify-content: center;
-    width:100%;
     height: 500px;
     background-color: var(--footer);
-    
 }
 
-#footer_first{
+#footer_section1{
     display:flex;
     flex-wrap: wrap;
     justify-content:center;
     align-content:center;
-    width:100%;
     height:400px;
 }
 
-#footer_box1{
+#footer_section2{
     display:flex;
     flex-wrap: wrap;
-    width:200px;
+}
+
+/* footer elements */
+
+#footer_box1{
+    width:150px;
     height:300px;
     background-color: var(--footerbox1);
 }
@@ -181,16 +176,14 @@ set fixed width, remove to set back at 100% of screen size
 #footer_box2{
     display:flex;
     flex-wrap: wrap;
-    justify-content:center;
-    align-content:center;
-    width:500px;
+    justify-content:space-evenly;
+    width:450px;
     height:300px;
     background-color: var(--footerbox2);
 }
 
-#footer_second{
-    display:flex;
-    flex-wrap: wrap;
+#box2_column{
+    border: dashed 1px;
 }
 
 #footer_box3{
@@ -199,18 +192,18 @@ set fixed width, remove to set back at 100% of screen size
     align-self: flex-end;
     justify-content:space-between;
     align-content:center;
-    width:1000px;
+    width:600px;
     height:50px;
     background-color: var(--footerbox2);
 }
 
-#footer_logo{
+#box3_logo{
     width:40px;
     height:20px;
     background-color: var(--footerbox4);
 }
 
-#footer_button{
+#box3_button{
     width:40px;
     height:20px;
     background-color: var(--footerbox4);
