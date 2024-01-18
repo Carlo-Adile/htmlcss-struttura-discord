@@ -9,8 +9,8 @@
     display:flex;
     flex-wrap: wrap;
     justify-content:center;
-    height:600px;
-    width:1700px;
+    height:300px;
+    width:100%;
     background-color: var(--header);
 }
 
@@ -24,7 +24,7 @@
 
 #header_content{
     display:flex;
-    width: 750px;
-    height: 350px;
+    width: 45%;
+    height: 50%;
     background-color: var(--header_content);
 }
