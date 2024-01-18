@@ -1,0 +1,30 @@
+
+:root{
+    --header:#42e77e;
+    --first_section:#ae977a;
+    --header_content: #e5c69f;
+}
+
+#site_header{
+    display:flex;
+    height:600px;
+    width:1700px;
+    background-color: var(--header);
+}
+
+#site_header header{
+    display:flex;
+    align-self:baseline;
+    width:100%;
+    height:85px;
+    background-color: var(--first_section);
+}
+
+#site_header main{
+    display:flex;
+    justify-self: center;
+    align-self:center;
+    width: 750px;
+    height: 350px;
+    background-color: var(--header_content);
+}
